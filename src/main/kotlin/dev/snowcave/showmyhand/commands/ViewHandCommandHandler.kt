@@ -2,6 +2,7 @@ package dev.snowcave.showmyhand.commands
 
 import dev.snowcave.showmyhand.ItemStore
 import dev.snowcave.showmyhand.utils.Chatter
+import net.kyori.adventure.text.Component
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
@@ -41,7 +42,7 @@ class ViewHandCommandHandler(private val itemStore: ItemStore) : CommandExecutor
             }
             val item = itemStore.getItem(itemKey)
 
-            val inv = Bukkit.createInventory(null, 9, "Item Display")
+            val inv = Bukkit.createInventory(null, 9, Component.text("Item Display"))
             inv.setItem(4, item)
             sender.openInventory(inv)
             viewers.add(sender.uniqueId)
