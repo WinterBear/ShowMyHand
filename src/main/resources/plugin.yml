@@ -1,0 +1,18 @@
+name: ShowMyHand
+version: 1.0
+author: WinterBear
+main: dev.snowcave.showmyhand.ShowMyHand
+api-version: 1.16
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:1.9.23
+commands:
+  showoff:
+    description: "Shares a preview your held item"
+    aliases: [showmyhand, hand, share]
+    permission: "showmyhand.showoff"
+    usage: "Usage: /<command> [<Player>] - Broadcasts the item preview, or sends to a player if one is specified"
+  viewhand:
+    description: "Views a preview of an item"
+permissions:
+  showmyhand.showoff:
+    default: true
