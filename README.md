@@ -9,8 +9,8 @@ Players can click the chat preview to see the item in a virtual display:
 
 ### Commands
 
-`/showoff` - Sends a preview of the item in your hands to the server chat
-`/showoff <player>` - Sends a preview of the item in your hands to another player
+- `/showoff` - Sends a preview of the item in your hands to the server chat
+- `/showoff <player>` - Sends a preview of the item in your hands to another player
 
 **Aliases** - `/showmyhand` `/hand` `/share`
 
