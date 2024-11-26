@@ -6,9 +6,8 @@ plugins {
 }
 
 group = "dev.snowcave"
-version = "1.0-SNAPSHOT"
-val latestJava = 21
-val oldestJava = 17
+version = "1.0"
+val javaVersion = 17
 
 repositories {
     mavenCentral()
@@ -23,8 +22,8 @@ dependencies {
 }
 
 tasks.withType<JavaCompile>().configureEach {
-    options.compilerArgs.add("-source $oldestJava")
-    options.compilerArgs.add("-target $oldestJava")
+    options.compilerArgs.add("-source $javaVersion")
+    options.compilerArgs.add("-target $javaVersion")
 }
 
 tasks.withType<ShadowJar>() {
@@ -41,5 +40,5 @@ tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(oldestJava)
+    jvmToolchain(javaVersion)
 }
