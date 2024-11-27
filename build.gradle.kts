@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "dev.snowcave"
-version = "1.0"
+version = "1.1.0"
 val javaVersion = 17
 
 repositories {

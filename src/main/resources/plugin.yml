@@ -1,10 +1,11 @@
 name: ShowMyHand
-version: 1.0
+version: 1.1.0
 author: WinterBear
 main: dev.snowcave.showmyhand.ShowMyHand
 api-version: 1.16
 libraries:
   - org.jetbrains.kotlin:kotlin-stdlib:1.9.23
+folia-supported: true
 commands:
   showoff:
     description: "Shares a preview your held item"
