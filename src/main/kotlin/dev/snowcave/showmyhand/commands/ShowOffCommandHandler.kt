@@ -68,8 +68,10 @@ class ShowOffCommandHandler(private val itemStore: ItemStore) : CommandExecutor 
 
     private fun resolveItemName(item: ItemStack): Component {
         val itemMeta = item.itemMeta
-        if(itemMeta?.displayName() != null){
+        if(itemMeta?.displayName() != null) {
             return itemMeta.displayName() as Component
+        } else if (Component.IS_NOT_EMPTY.test(itemMeta.itemName())) {
+            return itemMeta.itemName()
         } else {
             val materialName = item.type.name;
             return Component.text(materialName.replace("_", " ").capitalizeWords());
